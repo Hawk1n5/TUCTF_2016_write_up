@@ -40,7 +40,14 @@ In the pwnMe function.
 It will get bearOffset first,If it didnt create bear,This value will be 0.
 
 Then it will use `heap + bearOffset` to get where is bear data.
+	
+	0x603000:	0x0000000000000000	0x0000000000000021
+	
+	0x603010:	0x0000000a61616161	0x0000000000000000
+	
+	0x603020:	0x0000000300000000	0x0000000000020fe1
 
+(Im create a tiger type 3,name is "aaaa", bearOffset is 0,so it will get this tiger data.)
 but it didn't check is bear or not.
 
 Next step,It have a condition if your type is not 3,it will exit.
