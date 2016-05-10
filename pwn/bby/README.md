@@ -38,3 +38,5 @@ And there hava a function call printFlag.If I can controller eip and jump to thi
 	[0x7a7a7a7a] --- SIGSEGV (Segmentation fault) ---
 
 	[0xffffffffffffffff] +++ killed by SIGSEGV +++
+
+It's easy to exploit,When input padding 24bytes,Next 4 bytes will be return address.
