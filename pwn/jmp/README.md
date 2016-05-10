@@ -48,9 +48,9 @@ It is easy to controller return address.
 
 And it have `080483d0 <gets@plt>:` function.
 
-So can use this function call write to bss and ret to bss to execute shellcode.
+So can use this function call to write bss and ret to bss to execute shellcode.
 
-But it have a problem,When I first use gets,It can write to bss.
+But it have a problem,When I first use gets,It can't write to bss.
 
 But it can write in second time when use gets.
 
