@@ -1,0 +1,4 @@
+break *0x400ca2
+break *0x400d8d
+break deleteAnimal
+
