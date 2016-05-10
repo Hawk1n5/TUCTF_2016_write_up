@@ -25,8 +25,7 @@ And there hava a function call printFlag.If I can controller eip and jump to thi
 0x1 Vulnerability
 =
 
-`
-# python -c "print 'a'*24+'zzzz'"|ltrace -i ./bby 
+`# python -c "print 'a'*24+'zzzz'"|ltrace -i ./bby 
 
 [0x8048491] __libc_start_main(0x80485c9, 1, 0xffb97214, 0x8048610 <unfinished ...>
 
