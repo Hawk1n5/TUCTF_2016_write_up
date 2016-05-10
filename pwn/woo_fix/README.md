@@ -18,4 +18,4 @@ second time create a bear, then bearOffset will set 1.
 
 Then delete index is 1,after delete bearOffset still is 1,It didn't reset.
 
-So now create a tiger type is 3,and name is "aaaa",you will get some solved in woo2.
+So now create a tiger type is 3,and name is "aaaa",you will get some solution in woo2.
