@@ -6,6 +6,7 @@
 This file is same as woo2,but it have some difference.
 
 0x2 Vulnerability
+=
 
 In this time.bearOffset default is 0xffffffff,set the value when you create bear first.
 
